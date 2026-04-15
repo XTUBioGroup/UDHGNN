@@ -2,7 +2,7 @@ Hybrid Graph Convolutional Networks with Directed, Undirected, and Hypergraph St
 
 
 
-Dependence on installation：
+**Dependence on installation：**
 
 ```
 # 1. Create and activate conda environment (Python 3.9)
@@ -30,3 +30,14 @@ pip install dhg==0.9.5
 # 7. (Optional) Verify installation
 python -c "import torch; import torch_geometric; import dhg; print('All OK')"
 ```
+
+#### Example Usage：
+
+```
+# Run UDHGNN using STRING network for pan-cancer prediction
+python main.py --dataset STRING --cancer_type pan-cancer
+
+# Run UDHGNN using CPDB network for kirp cancer type
+python main.py --dataset CPDB --cancer_type kirp
+```
+
