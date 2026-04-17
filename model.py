@@ -35,7 +35,7 @@ class HGNN_conv(nn.Module):
 
 
 class HypergraphHGNN(nn.Module):
-    """Hypergraph neural network (original model hypergrph_HGNN), supports configurable layers"""
+    """Hypergraph neural network (original model hypergraph_HGNN), supports configurable layers"""
 
     def __init__(self, num_nodes, n_hid, dropout=0.5, num_layers=3):
         super(HypergraphHGNN, self).__init__()
