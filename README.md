@@ -47,7 +47,8 @@ The core protein–protein interaction (PPI) network under the STRING directory 
 integrates diverse evidence types—including experimental validation, co-expression analysis, and text mining—to provide weighted
 interaction relationships among human genes. The auxiliary networks within this directory—namely the Pathway functional 
 similarity network, the GO semantic similarity network, the RegNetwork gene regulatory network, and the gene-set hypergraph 
-constructed from MSigDB—have all had their node sets strictly aligned with the gene nodes in the STRING PPI network, ensuring consistent node space across the multi-view graph learning process.
+constructed from MSigDB—have all had their node sets strictly aligned with the gene nodes in the STRING PPI network, ensuring
+consistent node space across the multi-view graph learning process.
 
 msigdb/
 Molecular Signatures Database. Stores gene set annotation data, including hallmark gene sets, oncogenic signatures, and pathway-
