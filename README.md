@@ -8,16 +8,19 @@ Core Code Files
 
 ```
 main.py
-The main entry script of the project. It parses command-line parameters (dataset type, cancer type), loads datasets, initializes the UDHGNN model, controls the entire training, validation, and testing process, and outputs final prediction results.
+The main entry script of the project. It parses command-line parameters (dataset type, cancer type), loads datasets, initializes
+the UDHGNN model, controls the entire training, validation, and testing process, and outputs final prediction results.
 
 model.py
-Defines the core architecture of the Hybrid Graph Convolutional Network. It integrates directed graph convolution, undirected graph convolution, and hypergraph convolution modules, and implements the forward propagation logic of the model.
+Defines the core architecture of the Hybrid Graph Convolutional Network. It integrates directed graph convolution, undirected
+graph convolution, and hypergraph convolution modules, and implements the forward propagation logic of the model.
 
 evaluate.py
 Implements model evaluation functions, including calculating classification metrics (AUPRC, F1-score, AUROC).
 
 utils.py
-Collects general utility functions, including data preprocessing, data loading, file path management, random seed setting, log recording, and auxiliary calculation functions.
+Collects general utility functions, including data preprocessing, data loading, file path management, random seed setting, log 
+recording, and auxiliary calculation functions.
 ```
 
 
@@ -34,13 +37,21 @@ Gene Label Files
 These files provide supervised learning labels for model training.
 
 CPDB/
-The core PPI network under the CPDB directory is sourced from the ConsensusPathDB database, which aggregates high-confidence human protein interaction information from multiple mainstream interaction databases. The node sets of the auxiliary networks within this directory—the Pathway functional similarity network, the GO semantic similarity network, the RegNetwork gene regulatory network, and the gene-set hypergraph based on MSigDB—have likewise been aligned with the gene nodes in the CPDB PPI network.
+The core PPI network under the CPDB directory is sourced from the ConsensusPathDB database, which aggregates high-confidence
+human protein interaction information from multiple mainstream interaction databases. The node sets of the auxiliary networks 
+within this directory—the Pathway functional similarity network, the GO semantic similarity network, the RegNetwork gene 
+regulatory network, and the gene-set hypergraph based on MSigDB—have likewise been aligned with the gene nodes in the CPDB PPI network.
 
 STRING/
-The core protein–protein interaction (PPI) network under the STRING directory is sourced from the STRING database (v11.5), which integrates diverse evidence types—including experimental validation, co-expression analysis, and text mining—to provide weighted interaction relationships among human genes. The auxiliary networks within this directory—namely the Pathway functional similarity network, the GO semantic similarity network, the RegNetwork gene regulatory network, and the gene-set hypergraph constructed from MSigDB—have all had their node sets strictly aligned with the gene nodes in the STRING PPI network, ensuring consistent node space across the multi-view graph learning process.
+The core protein–protein interaction (PPI) network under the STRING directory is sourced from the STRING database (v11.5), which
+integrates diverse evidence types—including experimental validation, co-expression analysis, and text mining—to provide weighted
+interaction relationships among human genes. The auxiliary networks within this directory—namely the Pathway functional 
+similarity network, the GO semantic similarity network, the RegNetwork gene regulatory network, and the gene-set hypergraph 
+constructed from MSigDB—have all had their node sets strictly aligned with the gene nodes in the STRING PPI network, ensuring consistent node space across the multi-view graph learning process.
 
 msigdb/
-Molecular Signatures Database. Stores gene set annotation data, including hallmark gene sets, oncogenic signatures, and pathway-related gene sets. Used for gene feature enhancement, functional enrichment analysis, and auxiliary model feature learning.
+Molecular Signatures Database. Stores gene set annotation data, including hallmark gene sets, oncogenic signatures, and pathway-
+related gene sets. Used for gene feature enhancement, functional enrichment analysis, and auxiliary model feature learning.
 ```
 
 
